@@ -71,8 +71,8 @@ app.post("/scrape", function (req, res) {
 
     cheerioScrapePromise.then(function (results) {
         //console.log(results[10]);
-        results.forEach(video => {
-            db.scraper.insert(video, function () {}); //End Each loop for scraping title and link
+        results.forEach(article => {
+            db.news.insert(article, function () {}); //End Each loop for scraping title and link
         });
         res.send("Posted All Video!!!!");
         // expected output: "Success!"
