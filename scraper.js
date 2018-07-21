@@ -65,6 +65,9 @@ rp(options)
             var linkScrape = $(element).children("h3").children("a").attr('href');
             console.log("  Link #" + i + ": "+ linkScrape);
 
+            var imgScrape = $(element).children("div.tease-photo-img").children("img");
+            console.log("  Link #" + i + ": "+ imgScrape);
+
 
             // Save these results in an object that we'll push into the results array we defined earlier
             articleData.push({
@@ -85,4 +88,5 @@ rp(options)
 
 
 
-//_-------End Cheerio Scrpa with Request-Promise----------//
+//_-------End Cheerio Scrape with Request-Promise----------//
+
